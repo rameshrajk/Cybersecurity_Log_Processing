@@ -1,0 +1,7 @@
+This repository contains my solution to a data ingestion challenge posed by Adlumin during an interview process. The task focuses mainly on data transformation and ecosystem design, with a minor emphasis on coding capability, AWS familiarity, and communication skills.
+
+The challenge uses real-world data adapted from a recent business problem the company faced. The data, representing 1% of two days’ worth of process execution data from two clients, is partially anonymized and available in two formats: .csv and parquet. The parquet data is Snappy compressed and partitioned by tenant_id, event_type, year, month, day, and hour. It contains 8329 records with various fields.
+
+As part of the task, I've utilized Python to transform this data in preparation for a machine learning model. Initially, the data was selected with SQL (query.sql), loaded as a Pandas dataframe, and transformed using Python (transformation.py). To scale the process for production, the team aimed to handle the transformation using a cloud service with Spark. 
+
+In this repository, you will find my rework of the transformation using PySpark (adlumin_data_challenge.ipynb), applied to the data specified by the original SQL query. I've also included a unit test or series of unit tests to validate the transformation. I've chosen these tests based on their relevance to confirming the transformation's accuracy and efficiency. 
